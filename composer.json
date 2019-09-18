@@ -1,6 +1,6 @@
 {
   "name": "webnuvola/laravel-active",
-  "description": "Helper class for Laravel applications to get active class based on current route",
+  "description": "Helper functions for Laravel applications to get active class based on current route",
   "keywords": ["laravel", "active", "menu", "current"],
   "type": "library",
   "license": "MIT",
