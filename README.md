@@ -1,8 +1,6 @@
 # Laravel active
 Helper class for Laravel applications to get active class based on current route.
 
-This package is still in development.
-
 ## Installation
 ```bash
 composer require webnuvola/laravel-active
