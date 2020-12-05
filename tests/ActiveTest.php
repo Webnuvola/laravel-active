@@ -18,6 +18,15 @@ final class ActiveTest extends TestCase
 
         $this->assertEquals('active-class', active_class(true, 'active-class', 'inactive-class'));
         $this->assertEquals('inactive-class', active_class(false, 'active-class', 'inactive-class'));
+
+        $this->assertEquals('active', active_class(new Request()));
+        $this->assertEquals('', active_class(null));
+
+        $this->assertEquals('active', active_class(['foo']));
+        $this->assertEquals('', active_class([]));
+
+        $this->assertEquals('active', active_class(1));
+        $this->assertEquals('', active_class(0));
     }
 
     public function testIfUriFunction()

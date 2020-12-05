@@ -9,7 +9,7 @@ if (! function_exists('active_class')) {
      * @param  string $inactiveClass
      * @return string
      */
-    function active_class($condition, string $activeClass = 'active', string $inactiveClass = ''): string
+    function active_class(mixed $condition, string $activeClass = 'active', string $inactiveClass = ''): string
     {
         return $condition ? $activeClass : $inactiveClass;
     }
@@ -79,7 +79,7 @@ if (! function_exists('if_route_param')) {
      * @param  mixed $value
      * @return bool
      */
-    function if_route_param(string $param, $value): bool
+    function if_route_param(string $param, mixed $value): bool
     {
         return request()->route($param) === $value;
     }
