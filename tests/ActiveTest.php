@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection StaticInvocationViaThisInspection */
 
 namespace Webnuvola\Laravel\Active\Tests;
 
@@ -8,7 +8,7 @@ use Orchestra\Testbench\TestCase;
 
 final class ActiveTest extends TestCase
 {
-    public function testActiveClassFunction()
+    public function testActiveClassFunction(): void
     {
         $this->assertEquals('active', active_class(true));
         $this->assertEquals('', active_class(false));
@@ -29,7 +29,7 @@ final class ActiveTest extends TestCase
         $this->assertEquals('', active_class(0));
     }
 
-    public function testIfUriFunction()
+    public function testIfUriFunction(): void
     {
         $this->app->instance('request', Request::create('/test-uri'));
 
@@ -43,7 +43,7 @@ final class ActiveTest extends TestCase
         $this->assertFalse(if_uri('another-uri', 'test'));
     }
 
-    public function testIfUriPatternFunction()
+    public function testIfUriPatternFunction(): void
     {
         $this->app->instance('request', Request::create('/test-uri-pattern'));
 
@@ -66,7 +66,7 @@ final class ActiveTest extends TestCase
         $this->assertFalse(if_uri_pattern('another-uri*', 'test-pattern*'));
     }
 
-    public function testIfRouteFunction()
+    public function testIfRouteFunction(): void
     {
         $request = Request::create('/test-route');
         $request->setRouteResolver(function () use ($request) {
@@ -88,7 +88,7 @@ final class ActiveTest extends TestCase
         $this->assertFalse(if_route('another.route', 'test'));
     }
 
-    public function testIfRoutePatternFunction()
+    public function testIfRoutePatternFunction(): void
     {
         $request = Request::create('/test-route-pattern');
         $request->setRouteResolver(function () use ($request) {
@@ -119,7 +119,7 @@ final class ActiveTest extends TestCase
         $this->assertFalse(if_route_pattern('another.route*', 'test.pattern*'));
     }
 
-    public function testIfRouteParamFunction()
+    public function testIfRouteParamFunction(): void
     {
         $request = Request::create('/test-route-param');
         $request->setRouteResolver(function () use ($request) {
