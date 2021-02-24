@@ -1,9 +1,20 @@
 # Laravel active
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/webnuvola/laravel-active.svg?style=flat-square)](https://packagist.org/packages/webnuvola/laravel-active)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/webnuvola/laravel-active/Tests?label=tests)](https://github.com/webnuvola/laravel-active/actions?query=workflow%3ATests+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/webnuvola/laravel-active.svg?style=flat-square)](https://packagist.org/packages/webnuvola/laravel-active)
+
 Helper class for Laravel applications to get active class based on current route.
 
 ## Installation
+You can install the package via composer:
+
 ```bash
 composer require webnuvola/laravel-active
+```
+
+## Testing
+```bash
+composer test
 ```
 
 ## Credits
